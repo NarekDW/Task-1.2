@@ -9,7 +9,7 @@ class MathSequence {
     /*Переменная epsilan - окрестность последовательности,
     * где выполняется условие М: 1/(1+i)^2
     * */
-    double epsilan;
+    private double epsilan;
 
     protected MathSequence(double epsilan){
         this.epsilan=epsilan;

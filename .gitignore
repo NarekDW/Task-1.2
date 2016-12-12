@@ -3,7 +3,7 @@
 *.iml
 /.gradle/
 /solution/build/
-
+out
 /gradle/
 
 
