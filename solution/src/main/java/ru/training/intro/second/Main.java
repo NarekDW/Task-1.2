@@ -5,7 +5,8 @@ package ru.training.intro.second;
  */
 public class Main {
     public static void main(String[] args){
-        MathSequence sequence=new MathSequence(0.001);
+        MathSequence sequence=new MathSequence();
+        sequence.setEpsilan(0.001);
         sequence.checkSequence();
     }
 }

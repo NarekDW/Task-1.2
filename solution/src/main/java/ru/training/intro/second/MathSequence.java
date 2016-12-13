@@ -11,7 +11,7 @@ class MathSequence {
     * */
     private double epsilan;
 
-    MathSequence(double epsilan){
+    void setEpsilan(double epsilan){
         if(epsilan>0){
             this.epsilan=epsilan;
         } else printErr();
@@ -34,7 +34,6 @@ class MathSequence {
         boolean condition=false; // condition - состояние условия неравенста
         double a=(1/pow((1+i), 2)); // a - значение i-ой последовательности
         if (a < epsilan) condition = true;
-
         print(i, a); // Вывод номера последовательности и его значения
         return condition;
     }
