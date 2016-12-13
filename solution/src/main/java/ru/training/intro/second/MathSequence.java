@@ -11,13 +11,15 @@ class MathSequence {
     * */
     private double epsilan;
 
-    protected MathSequence(double epsilan){
-        this.epsilan=epsilan;
+    MathSequence(double epsilan){
+        if(epsilan>0){
+            this.epsilan=epsilan;
+        } else printErr();
     }
 
     /*Метод возвращающий индекс элемента
     * при котором выполняется условие M*/
-    protected int checkSequence(){
+    int checkSequence(){
         int i=1;    // индекс при a
         while(!M(i)){
             ++i;
@@ -44,5 +46,10 @@ class MathSequence {
     private static void printResult(int i, double epsilan){
         System.out.println("\nПри i = "+i+" выполняется условие М: a<epsilan" +
                 "\nГде epsilan = "+epsilan);
+    }
+
+    private void printErr(){
+        System.err.println("Epsilan должно быть больше нуля!");
+        System.exit(0);
     }
 }
